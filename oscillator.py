@@ -8,7 +8,7 @@ imWidth, imHeight = 1024, 512  # screen size
 buff = collections.deque([0.0] * 10, maxlen=10)
 
 
-def draw_wave(screen, mono_audio, xs, title="oscilloscope", gain=1, print_avg=False):
+def draw_wave(screen, mono_audio, xs, title="oscilloscope", gain=3, print_avg=False):
     # freq = find_freq(mono_audio[0:len(xs)], len(xs))
     peak_volume = np.max(mono_audio[0:len(xs)])
     buff.append(peak_volume)
